@@ -61,7 +61,7 @@ export
 
 all: lib/$(PCILIB) lspci setpci example lspci.8 setpci.8 pcilib.7 pci.ids.5 update-pciids update-pciids.8 $(PCI_IDS)
 
-lib/$(PCILIB): $(PCIINC) force
+lib/$(PCILIB) lib/$(PCILIBPC): $(PCIINC) force
 	$(MAKE) -C lib all
 
 force:
